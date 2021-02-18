@@ -25,7 +25,7 @@ releaseManager {
             appendVersion.set(true)
         }
         createReleasePatchBranchRule {
-            onlyOn.set("release")
+            startingWith.set("release")
             commitMessage.set("ReleaseManager Plugin created release patch branch")
             appendVersion.set(true)
         }
