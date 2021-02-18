@@ -24,6 +24,11 @@ releaseManager {
             commitMessage.set("ReleaseManager Plugin created release branch")
             appendVersion.set(true)
         }
+        createReleasePatchBranchRule {
+            onlyOn.set("release")
+            commitMessage.set("ReleaseManager Plugin created release patch branch")
+            appendVersion.set(true)
+        }
         createReleaseHotFixBranchRule {
             startingWith.set("release/")
             commitMessage.set("ReleaseManager Plugin created a hot-fix release branch")
