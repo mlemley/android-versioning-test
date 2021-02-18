@@ -5,34 +5,10 @@ plugins {
 }
 
 releaseManager {
-
     git {
         provider {
             providerName.set("GitHub")
             accessToken.set("$GITHUB_ACCESS_TOKEN")
-        }
-    }
-
-    rules {
-        continuousBuildRule {
-            onlyOn.set("develop")
-            commitMessage.set("ReleaseManager Plugin incremented continous build version")
-            appendVersion.set(true)
-        }
-        createReleaseBranchRule {
-            onlyOn.set("develop")
-            commitMessage.set("ReleaseManager Plugin created release branch")
-            appendVersion.set(true)
-        }
-        createReleasePatchBranchRule {
-            startingWith.set("release")
-            commitMessage.set("ReleaseManager Plugin created release patch branch")
-            appendVersion.set(true)
-        }
-        createReleaseHotFixBranchRule {
-            startingWith.set("release/")
-            commitMessage.set("ReleaseManager Plugin created a hot-fix release branch")
-            appendVersion.set(true)
         }
     }
 }
